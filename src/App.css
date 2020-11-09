@@ -1,38 +1,48 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#bq-Background {
+  background-image:linear-gradient(#FFB703 0%, #FFE299 50%, #FFB703 100%);
+  height: 100vmax;
+  width: 100vmax;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
+}
+h1{
+  display: inline;
+  font-family: wrongtype;
+  text-shadow: 12px 12px 8px #023047;
 }
 
-.App-link {
-  color: #61dafb;
+@font-face {
+  font-family: 'wrongtype';
+  src: url('./typwrng.ttf');
+/*credit to https://www.dafont.com/type-wrong.font */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* from cssstars.com/shake-well */
+@keyframes jiggle {
+  0% { transform: translate(2px, 1px) rotate(0deg); }
+10% { transform: translate(-1px, -2px) rotate(-1deg); }
+20% { transform: translate(-3px, 0px) rotate(1deg); }
+30% { transform: translate(0px, 2px) rotate(0deg); }
+40% { transform: translate(1px, -1px) rotate(1deg); }
+50% { transform: translate(-1px, 2px) rotate(-1deg); }
+60% { transform: translate(-3px, 1px) rotate(0deg); }
+70% { transform: translate(2px, 1px) rotate(-1deg); }
+80% { transform: translate(-1px, -1px) rotate(1deg); }
+90% { transform: translate(2px, 2px) rotate(0deg); }
+100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+.jiggle:hover,
+.jiggle:focus {
+animation-name: jiggle;
+animation-duration: 1s;
+transform-origin:50% 50%;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+}
+.jiggle {
+display:inline-block
 }
