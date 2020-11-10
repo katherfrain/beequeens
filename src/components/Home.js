@@ -3,24 +3,20 @@ import Iframe from 'react-iframe';
 import AboutMe from './About-Me';
 import PersonalBest from './Personal-Records';
 import TopScores from './Top-Scores';
+import '../App.css'
+import { Link } from 'react-router-dom';
 
 function Homepage(){
     return (
     <>
-    <div id="bq-Background">
-        <h1>Bee Queen: Escape the Hive</h1>
-        <h1 class="jiggle">(?)</h1>
+
+    <div id="hivebarrier" url="/gamestart">
+TAKE
+UP
+SOME
+SPACE
+TURN OFF AUTOSTUFF
     </div>
-
-    <nav id="navbar">
-        <Link to={AboutMe}>About Bee</Link>
-        {/* <Link to={PersonalBest}>Personal Best</Link>
-        <Link to={TopScores}>Top Scores</Link> */}
-    </nav>
-
-    <Iframe id="game" url="/gamestart">
-
-    </Iframe>
     </>
     )
 }
