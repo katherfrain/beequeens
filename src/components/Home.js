@@ -1,23 +1,25 @@
 import React from 'react';
-import Iframe from 'react-iframe';
-import AboutMe from './About-Me';
-import PersonalBest from './Personal-Records';
-import TopScores from './Top-Scores';
 import '../App.css'
+import './Home.css'
 import { Link } from 'react-router-dom';
+import queenbee from './queenbee.svg'
+
+class QueenBee extends React.Component{
+    constructor(props){
+        super(props)
+        this.state = {isAlive: true}
+        
+    }
+
+}
 
 function Homepage(){
     return (
-    <>
-
-    <div id="hivebarrier" url="/gamestart">
-TAKE
-UP
-SOME
-SPACE
-TURN OFF AUTOSTUFF
+    <div id="gamescreen">
+        <div id="hivebarrier">
+            <img src={queenbee} id="QueenBee"></img>
     </div>
-    </>
+  </div>
     )
 }
 export default Homepage; 

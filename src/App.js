@@ -38,18 +38,18 @@ function App() {
   return (
 <div id="bq-Background">
   <div>
-    <h1>Bee Queen: Escape the Hive</h1>
+    <h1><Link to='/' id="title">Bee Queen: Escape the Hive</Link></h1>
     <h1 className="jiggle">(?)</h1>
   </div>
 
+  <nav id="navbar">
+      <Link to='/about-bee'>About Bee</Link>
+      <Link to='/personal-beest'>Personal Best</Link>
+      <Link to='/top-scores'>Top Scores</Link> 
+  </nav>
 
-<nav id="navbar">
-    <Link to='/about-bee'>About Bee</Link>
-    <Link to='/personal-beest'>Personal Best</Link>
-    <Link to='/top-scores'>Top Scores</Link> 
-</nav>
-<div className="content">
 
+  <div className="content">
     <Switch>
       <Route path="/" exact>
           <HomePage />
@@ -69,7 +69,8 @@ function App() {
  
     </Switch>
     </div>
-    </div>
+  
+  </div>
   );
 }
 

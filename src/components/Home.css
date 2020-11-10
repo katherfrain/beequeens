@@ -1,0 +1,16 @@
+#gamescreen {
+    width: 800px;
+    height: 400px;
+    background-color: #8ECAE6;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+  }
+  #hivebarrier{
+    width: 95%;
+    height: 95%;
+    background-color: #219EBC;
+  }
+  #QueenBee{
+    height: 45%;
+  }
