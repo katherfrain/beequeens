@@ -20,8 +20,6 @@
 
 
 
-
-
 import AboutMe from './components/About-Me.js'
 import PersonalBest from './components/Personal-Records.js';
 import TopScores from './components/Top-Scores.js'
@@ -47,7 +45,6 @@ function App() {
       <Link to='/personal-beest'>Personal Best</Link>
       <Link to='/top-scores'>Top Scores</Link> 
   </nav>
-
 
   <div className="content">
     <Switch>

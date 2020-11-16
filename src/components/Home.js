@@ -10,7 +10,6 @@ class QueenBee extends React.Component{
         this.state = {isAlive: true}
         
     }
-
 }
 
 function Homepage(){
