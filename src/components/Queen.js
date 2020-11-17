@@ -2,10 +2,10 @@ import React from 'react';
 import queenbee from './queenbee.svg'
 import useKeyPress from '../hooks/use-key-press/index'
 import useWalk from '../hooks/use-walk/usewalk'
+import CollisionDetector from '../hooks/use-collison-detect/collisiondetect'
 
 
 export default function QueenBee() {
-
     const {move, position} = useWalk()
 
     useKeyPress((e)=> {
@@ -16,7 +16,7 @@ export default function QueenBee() {
         console.log(dir)
 
     }) 
-    if(this.isColliding) {
+    if(CollisionDetector()) {
         return (
             <img id="queenbee"
             src={queenbee}
@@ -24,14 +24,25 @@ export default function QueenBee() {
             height={200}
             width={200}
             style ={{
-                transform: `translate(-${position.x}px, -${position.y}px)`
+                    transform: `translate(-${position.x}px, -${position.y}px)`
             }}
-            />
-        )
+        />)
+     }
+
+     return (
+        <img id="queenbee"
+        src={queenbee}
+        alt='queenbee'
+        height={200}
+        width={200}
+        style ={{
+            transform: `translate(${position.x}px, ${position.y}px)`
+        }}
+     />)
     }
 
     
-}
+
 
 
 
